@@ -1,0 +1,22 @@
+h1{
+  font-size: 3rem;
+  margin: 0;
+  
+}
+h2{
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+h3{
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  height: 1.5rem;
+  &.line{
+    border-bottom: 1px solid gray;
+  }
+}
+h4{
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  height: 1rem;
+}

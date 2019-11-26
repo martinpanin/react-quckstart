@@ -1,0 +1,16 @@
+/*================================
+        Configs & Utils
+=================================*/
+@import "./util/Config"; //Configs, Colors, Breakpoinnts
+@import "./util/utils";
+@import "./util/Base";
+@import "./util/prelolader";
+@import "./util/Animations";
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+
+// Components
+@import "./components/Typography";
+@import "./components/background";

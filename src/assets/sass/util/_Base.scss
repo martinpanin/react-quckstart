@@ -1,0 +1,26 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  padding: 3rem 2rem;
+  height: 100vh;
+  a,
+  button{
+    transition: $transition;
+  }
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    background: rgba(255,255,255,0.85);
+    height: calc(100vh - 6rem);
+    padding: 1rem;
+    justify-content: space-a;
+  }
+}
+
+
+.disabled{
+  filter: grayscale(100%)!important;
+  pointer-events: none!important;
+  opacity: 0.5;
+}

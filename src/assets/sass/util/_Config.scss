@@ -1,0 +1,15 @@
+@import 'Colors';
+@import "Breakpoint";
+
+/*-----------------------------------------------------------------------------
+    VARIABLES
+-----------------------------------------------------------------------------*/
+$global-width: 1366px !default;
+$border-radius: 0.3rem;
+$transition:0.2s;
+$button-radius: $border-radius;
+$font-family:'Roboto', sans-serif;
+$body-font-color: $body-font !default;
+$body-background:$body !default;
+$border-primary: 2px solid $primary;
+$border: 1px solid $gray4;

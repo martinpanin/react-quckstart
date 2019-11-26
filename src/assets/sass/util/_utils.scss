@@ -1,0 +1,151 @@
+/*-----------------------------------------------------------------------------
+   USEFUL CLASSES
+-----------------------------------------------------------------------------*/
+.hide{
+  display: none;
+}
+
+.hidden{
+  background: transparent;
+  border: none;
+  padding: 1rem;
+  font-size: 0;
+  outline: none;
+}
+.relative {
+  position: relative;
+}
+
+.absolute{
+  position: absolute;
+}
+
+.left{
+  left: 0;
+}
+
+.top{
+  top: 0;
+}
+
+.right{
+  right: 0;
+}
+
+.bottom{
+  bottom: 0;
+}
+
+.background-none{
+  background: none;
+}
+
+.margin-auto{
+  margin: auto!important;
+}
+
+.maxWidthNone{
+  max-width: unset!important;
+}
+
+.gridX{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.gridY{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.textCenter{
+  text-align: center;
+}
+.justifyCenter{
+  justify-content: center;
+}
+.alignCenter{
+  text-align: center;
+}
+
+.alignLeft{
+  text-align: flex-start;
+} 
+.textLeft{
+  text-align: left;
+}
+
+
+.alignRight{
+  text-align: flex-end;
+} 
+.textRight{
+  text-align: right;
+}
+
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+$i: 0;
+@while $i <=5 {
+  .order#{$i}{
+    order:#{$i};
+  }
+  $i: $i+1;
+}
+
+$i: 0;
+@while $i <=100 {
+  .basis#{$i}{
+    flex-basis:calc(1% * #{$i});
+  }
+  $i: $i+1;
+}
+
+$i: 0;
+@while $i <=5 {
+  .flex#{$i}{
+    flex:#{$i};
+  }
+  $i: $i+1;
+}
+
+//Margin ja padding loop. Example usage mt-0, mb-5, ml-10, mr-15.
+$i: 0;
+@while $i <=50 {
+  $size :(1rem * $i) / 16;
+  .m-#{$i} {
+    margin:$size!important;
+  }
+  .p-#{$i} {
+    padding: $size!important;
+  }
+  .mt-#{$i} {
+    margin-top: $size!important;
+  }
+  .pt-#{$i} {
+    padding-top: $size!important;
+  }
+  .mb-#{$i} {
+    margin-bottom: $size!important;
+  }
+  .pb-#{$i} {
+    padding-bottom: $size!important;
+  }
+  .ml-#{$i} {
+    margin-left: $size!important;
+  }
+  .pl-#{$i} {
+    padding-left: $size!important;
+  }
+  .mr-#{$i} {
+    margin-right: $size!important;
+  }
+  .pr-#{$i} {
+    padding-right: $size!important;
+  }
+  $i: $i+5;
+}
