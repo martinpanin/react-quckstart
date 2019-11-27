@@ -20,6 +20,10 @@
   position: absolute;
 }
 
+.fixed{
+  position: fixed;
+}
+
 .left{
   left: 0;
 }
@@ -65,12 +69,16 @@
 .justifyCenter{
   justify-content: center;
 }
+
+.justifySpaced{
+  justify-content: space-between;
+}
 .alignCenter{
   text-align: center;
 }
 
 .alignLeft{
-  text-align: flex-start;
+  align-items: flex-start;
 } 
 .textLeft{
   text-align: left;
@@ -78,7 +86,7 @@
 
 
 .alignRight{
-  text-align: flex-end;
+  align-items: flex-end;
 } 
 .textRight{
   text-align: right;
