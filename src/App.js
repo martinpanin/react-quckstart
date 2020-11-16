@@ -7,13 +7,12 @@ class App extends Component {
         super(props);
         this.state = {
             hide:false,
-            bg:false,
             edit:false,
             title:'Eesti veespordialade Kool',
             subTitle: "KLUBISISESED VÕISTLUSED 2019/2020. ÕA I POOLAASTA",
             name:"Nimi",
             place:"Koht",
-            date:"1 detsember 2019",
+            date:"1 detsember 2020",
             info:" Eesti Veespordialade Kooli  juhatuse liikmed ja komisjon",
             category:"kujundujumise edasijõudnute figuurid",
             category2:'(_______a sündinud ja nooremad)'
@@ -21,8 +20,6 @@ class App extends Component {
       };
 
         componentDidMount(){
-
-
         }
   
         handleHide=()=>{
@@ -38,28 +35,33 @@ class App extends Component {
                 hide:true
             })
             window.scroll(0,0);
-
+            setTimeout(this.actionPrint, 1000)
         }
 
         actionPrint=()=>{
             window.print();
         }
 
-        handleBg=()=>{
+        handleBg=(bg)=>{
           const body = document.querySelector('#root')
-          
-          this.setState({
-            bg:!this.state.bg
-          })
+          if(bg === 'bg1'){
+              body.classList.remove("bg2")
+              body.classList.remove("bg3")
+              body.classList.add("bg1")
 
-          if(this.state.bg){
-            body.classList.remove("bg2")
-            body.classList.add("bg1")
+          } else if(bg === 'bg2'){
+              body.classList.remove("bg1")
+              body.classList.remove("bg3")
+              body.classList.add("bg2")
+          } else if(bg === 'bg3'){
+              body.classList.remove("bg1")
+              body.classList.remove("bg2")
+              body.classList.add("bg3")
           } else{
-            body.classList.remove("bg1")
-            body.classList.add("bg2")
+              body.classList.remove("bg2")
+              body.classList.remove("bg3")
+              body.classList.add("bg1")
           }
-          
         }
         
         handleEdit=()=>{
@@ -78,9 +80,11 @@ class App extends Component {
       <React.Fragment>
         <section className={hide? `hide` : 'fixed top left'} style={{top:0, left:0}}>
           <button onClick={this.handleHide} className={hide? `hide` : ''}> Hide</button>
-          <button onClick={this.handleBg} className={hide? `hide` : ''}> BG</button>
+          <button onClick={this.handleBg.bind(this, 'bg1')} className={hide? `hide` : ''}>BG 1</button>
+          <button onClick={this.handleBg.bind(this, 'bg2')} className={hide? `hide` : ''}>BG 2</button>
+          <button onClick={this.handleBg.bind(this, 'bg3')} className={hide? `hide` : ''}>BG 3</button>
           <button onClick={this.handleEdit} className={hide? `hide` : ''}> Edit</button>
-            <button onClick={this.handlePrint} className={hide? `hide` : ''}> Print</button>
+          <button onClick={this.handlePrint} className={hide? `hide` : ''}> Print</button>
         </section>
         <section className={`container gridX`}>
         
